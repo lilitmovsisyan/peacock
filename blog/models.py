@@ -6,7 +6,7 @@ class Entry(models.Model):
     title = models.CharField(max_length = 200)
     #author = 
     date_published = models.DateTimeField(default=timezone.now) #need to import django.utils.timezone and use timezone.now WITHOUT brackets after now().
-    #entry_text = models.TextField()
+    text = models.TextField(default="")
     #attachments = 
     #tags = 
 

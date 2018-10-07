@@ -1,7 +1,15 @@
-<h1> Home </h1>
+{% extends 'blog/layout.html' %}
 
+{% block content %}
+
+<div class="container">
 {% for entry in entries_list %}
-    <p>{{ entry.title }}</p>
-    <p>{{ entry.date_published }}</p>
+    <div class="row">
+        <h2>{{ entry.title }}</h2>
+        <p>{{ entry.date_published }}</p>
+        <h4>{{ entry.text }}</h4>
+    </div>
 {% endfor %}
+</div>
 
+{% endblock %}
