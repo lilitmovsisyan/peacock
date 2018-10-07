@@ -1,0 +1,29 @@
+[1mdiff --git a/blog/__pycache__/admin.cpython-37.pyc b/blog/__pycache__/admin.cpython-37.pyc[m
+[1mindex 0765724..0f799c4 100644[m
+Binary files a/blog/__pycache__/admin.cpython-37.pyc and b/blog/__pycache__/admin.cpython-37.pyc differ
+[1mdiff --git a/blog/admin.py b/blog/admin.py[m
+[1mindex 8c38f3f..4332e41 100644[m
+[1m--- a/blog/admin.py[m
+[1m+++ b/blog/admin.py[m
+[36m@@ -1,3 +1,5 @@[m
+ from django.contrib import admin[m
+[32m+[m[32mfrom .models import Entry[m
+ [m
+ # Register your models here.[m
+[32m+[m[32madmin.site.register(Entry)[m
+\ No newline at end of file[m
+[1mdiff --git a/blog/templates/blog/home.html b/blog/templates/blog/home.html[m
+[1mindex d62e359..3c58572 100644[m
+[1m--- a/blog/templates/blog/home.html[m
+[1m+++ b/blog/templates/blog/home.html[m
+[36m@@ -1,3 +1,5 @@[m
+ <h1> Home </h1>[m
+ [m
+[31m-{{ entry }}[m
+\ No newline at end of file[m
+[32m+[m[32m<p>{{ entry.title }}</p>[m
+[32m+[m[32m<p>{{ entry.date_published }}</p>[m
+[32m+[m[32m<p>{{ entry.text }}</p>[m
+[1mdiff --git a/db.sqlite3 b/db.sqlite3[m
+[1mindex 5204cdb..479108a 100644[m
+Binary files a/db.sqlite3 and b/db.sqlite3 differ

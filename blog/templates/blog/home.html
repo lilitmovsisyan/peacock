@@ -1,3 +1,7 @@
 <h1> Home </h1>
 
-{{ entry }}
+{% for entry in entries_list %}
+    <p>{{ entry.title }}</p>
+    <p>{{ entry.date_published }}</p>
+{% endfor %}
+
