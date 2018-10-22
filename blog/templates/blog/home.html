@@ -9,6 +9,11 @@
         <p>{{ entry.author  }}</p>
         <p>{{ entry.date_published }}</p>
         <h4>{{ entry.text }}</h4>
+        <p>
+            {% for tag in entry.tags.all %}
+            {{ tag.name }}
+            {% endfor %}
+        </p>
     </div>
 {% endfor %}
 </div>
