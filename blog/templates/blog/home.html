@@ -14,6 +14,9 @@
             <span class="badge badge-pill badge-primary">#{{ tag.name }}</span>
             {% endfor %}
         </p>
+        {% for image in entry.images.all %}
+        <img src="{{ image.image.url }}" style="max-width: 100%">
+        {% endfor %}
     </div>
 {% endfor %}
 </div>

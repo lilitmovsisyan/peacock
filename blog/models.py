@@ -4,7 +4,7 @@ from django.utils import timezone
 # Create your models here.
 class Tag(models.Model):
     name = models.CharField(max_length = 30)
-    
+
     def __repr__(self):
             return self.name
     def __str__(self):
@@ -13,7 +13,12 @@ class Tag(models.Model):
 class Image(models.Model):
     image = models.ImageField(upload_to='', null=True)
     name = models.CharField(max_length = 100, default="")
-    entry = models.ForeignKey('Entry', on_delete=models.CASCADE)
+    entry = models.ForeignKey(
+        'Entry', 
+        on_delete=models.CASCADE,
+        related_name='images',
+        related_query_name='image'
+    )
 
 
 class Entry(models.Model):
