@@ -15,6 +15,6 @@ def home(request):
 def home(request):
     doc_title = "home"
     # retrieve all Entry objects from database
-    entries_list = [e for e in Entry.objects.all()] 
+    entries_list = [e for e in Entry.objects.all().order_by('-date_published')] 
     # pass the first 10 entries for rendering in the home template
     return render(request, 'blog/home.html', {'doc_title': doc_title, 'entries_list': entries_list[:10]})
