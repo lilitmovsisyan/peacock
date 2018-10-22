@@ -25,3 +25,4 @@ class Entry(models.Model):
 
 
 
+#For help, look up related objects, model fields, 
