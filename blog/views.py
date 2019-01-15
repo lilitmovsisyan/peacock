@@ -21,5 +21,8 @@ def home(request):
 
 def index(request):
     doc_title = "index"
-
-    return render(request, 'blog/index.html', {'doc_title': doc_title})
+    # retrieve all Entry objects from database (in reverse date order)
+    entries_list = [e for e in Entry.objects.all().order_by('-date_published')]
+    # group entries_list into rows of 3 (row=sublist)
+    rows = [entries_list[n:n+3] for n in range(0, len(entries_list), 3)]
+    return render(request, 'blog/index.html', {'doc_title': doc_title, 'rows': rows})

@@ -1,7 +1,17 @@
 {% extends 'blog/layout.html' %}
 
 {% block content %}
-<h1>test for index page extend layout</h1>
 
+<div class="container">
+    {% for row in rows %}
+    <div class="row">
+        {% for entry in row %}
+        <div class="col-sm">
+            {{ entry.title }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
 
 {% endblock %}
