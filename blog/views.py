@@ -18,3 +18,8 @@ def home(request):
     entries_list = [e for e in Entry.objects.all().order_by('-date_published')] 
     # pass the first 10 entries for rendering in the home template
     return render(request, 'blog/home.html', {'doc_title': doc_title, 'entries_list': entries_list[:10]})
+
+def index(request):
+    doc_title = "index"
+
+    return render(request, 'blog/index.html', {'doc_title': doc_title})
