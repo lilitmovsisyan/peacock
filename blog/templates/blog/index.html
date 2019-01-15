@@ -7,7 +7,7 @@
     <div class="row">
         {% for entry in row %}
         <div class="col-sm">
-            <a href="project.html" target=_blank title="See more about the {{ entry.title }} project">{{ entry.title }}</a>
+            <a href="project/{{ entry.title }}.html" target=_blank title="See more about the {{ entry.title }} project">{{ entry.title }}</a>
         </div>
         {% endfor %}
     </div>

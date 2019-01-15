@@ -26,3 +26,13 @@ def index(request):
     # group entries_list into rows of 3 (row=sublist)
     rows = [entries_list[n:n+3] for n in range(0, len(entries_list), 3)]
     return render(request, 'blog/index.html', {'doc_title': doc_title, 'rows': rows})
+
+
+"""this is still a GET request, but we need to tell it some info in an automated way.....
+and the actual hyperlink in the index.html page needs to be malleable....
+NB check urlpattern, too, as i work on this. 
+"""
+def project(request):
+    doc_title =  request #??????????need something else here and below
+    return render(request, 'blog/project.html', {'doc_title': doc_title, 'title': request})
+
