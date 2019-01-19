@@ -32,7 +32,7 @@ def index(request):
 and the actual hyperlink in the index.html page needs to be malleable....
 NB check urlpattern, too, as i work on this. 
 """
-def project(request):
+def project(request, project_title):
     #doc_title =  request #??????????need something else here and below
     #return render(request, 'blog/project.html', {'doc_title': "TEST", 'title': "TESTING"})
     return HttpResponse("TESTING")
