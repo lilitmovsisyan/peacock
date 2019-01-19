@@ -34,7 +34,7 @@ def index(request):
 def project(request, project_id, project_title):
     #return render(request, 'blog/project.html', {'doc_title': "TEST", 'title': "TESTING"})
     #return HttpResponse("TESTING")
-    entry = Entry.objects.all().get(id=project_id) #this is a QuerySet! 
+    entry = Entry.objects.all().get(id=project_id)
     doc_title = entry.title
     return render(request, 'blog/project.html', {'doc_title': doc_title, 'entry': entry})
 
