@@ -34,8 +34,12 @@ def index(request):
 def project(request, project_id, project_title):
     #return render(request, 'blog/project.html', {'doc_title': "TEST", 'title': "TESTING"})
     #return HttpResponse("TESTING")
-    #entry = Entry.objects.id(project_id)
-    #doc_title = entry.title
+    entry = Entry.objects.all().get(id=project_id) #this is a QuerySet! 
+    doc_title = entry.title
+    return render(request, 'blog/project.html', {'doc_title': doc_title, 'entry': entry})
 
-    return render(request, 'blog/project.html', {'doc_title': "TEST", 'entry': "still testing"})
 
+"""NOTES:
+entry = Entry.objects.all().filter(id=1) --> the .filter() function returns a QuerySet! This is not always what we want!
+entry = Entry.objects.all().get(id=1) --> in contrast, the .get() function returns a single object! We can then call things like the various field attributes on this object (e.g. entry.title to retrieve the title)
+"""
