@@ -6,7 +6,11 @@
 {% for entry in entries_list %}
     <div class="row">
         <div class="col">
-            <h2>{{ entry.title }}</h2>
+            <h2>
+              <a href="{% url 'project' entry.title %}" target=_blank title="See more about the {{ entry.title }} project">
+                {{ entry.title }}
+              </a>
+            </h2>
             <p>{{ entry.author  }}</p>
             <p>{{ entry.date_published }}</p>
             <h4>{{ entry.text }}</h4>
