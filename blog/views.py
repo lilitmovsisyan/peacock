@@ -1,5 +1,5 @@
 from django.shortcuts import render
-#from django.http import HttpResponse
+from django.http import HttpResponse
 from .models import Entry
 
 # Create your views here.
@@ -33,6 +33,8 @@ and the actual hyperlink in the index.html page needs to be malleable....
 NB check urlpattern, too, as i work on this. 
 """
 def project(request):
-    doc_title =  request #??????????need something else here and below
-    return render(request, 'blog/project.html', {'doc_title': doc_title, 'title': request})
+    #doc_title =  request #??????????need something else here and below
+    #return render(request, 'blog/project.html', {'doc_title': "TEST", 'title': "TESTING"})
+    return HttpResponse("TESTING")
+    #return render(request, 'blog/project.html', {'doc_title': "TEST", 'title':slug})
 
