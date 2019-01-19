@@ -31,9 +31,11 @@ def index(request):
 
 
 # project page:
-def project(request, project_title):
-    #doc_title =  request #??????????need something else here and below
+def project(request, project_id, project_title):
     #return render(request, 'blog/project.html', {'doc_title': "TEST", 'title': "TESTING"})
-    return HttpResponse("TESTING")
-    #return render(request, 'blog/project.html', {'doc_title': "TEST", 'title':slug})
+    #return HttpResponse("TESTING")
+    #entry = Entry.objects.id(project_id)
+    #doc_title = entry.title
+
+    return render(request, 'blog/project.html', {'doc_title': "TEST", 'entry': "still testing"})
 
