@@ -12,6 +12,7 @@ def home(request):
     return render(request, 'blog/home.html', {'entry': entry})
 """
 
+# blog post style home page, showing ten most recent posts as you scroll down the page:
 def home(request):
     doc_title = "home"
     # retrieve all Entry objects from database (in reverse date order)
@@ -19,6 +20,7 @@ def home(request):
     # pass the first 10 entries for rendering in the home template
     return render(request, 'blog/home.html', {'doc_title': doc_title, 'entries_list': entries_list[:10]})
 
+# grid layout home page, showing title of each project:
 def index(request):
     doc_title = "index"
     # retrieve all Entry objects from database (in reverse date order)
@@ -28,10 +30,7 @@ def index(request):
     return render(request, 'blog/index.html', {'doc_title': doc_title, 'rows': rows})
 
 
-"""this is still a GET request, but we need to tell it some info in an automated way.....
-and the actual hyperlink in the index.html page needs to be malleable....
-NB check urlpattern, too, as i work on this. 
-"""
+# project page:
 def project(request, project_title):
     #doc_title =  request #??????????need something else here and below
     #return render(request, 'blog/project.html', {'doc_title': "TEST", 'title': "TESTING"})
