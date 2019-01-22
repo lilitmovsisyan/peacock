@@ -4,52 +4,53 @@
 
 <div class="container">
 {% for entry in entries_list %}
-    <div class="row">
-        <div class="col">
-            <h2>
-              <a href="{% url 'project' entry.id entry.title %}" target=_blank title="See more about the {{ entry.title }} project">
-                {{ entry.title }}
-              </a>
-            </h2>
-            <p>{{ entry.author  }}</p>
-            <p>{{ entry.date_published }}</p>
-            <h4>{{ entry.text }}</h4>
-            <p>
-                {% for tag in entry.tags.all %}
-                <span class="badge badge-pill badge-primary">#{{ tag.name }}</span>
-                {% endfor %}
-            </p>
-            
-            <img src="{{ image.image.url }}" style="max-width: 100%">
+  <div class="row">
+    <div class="col">
+      <h2>
+        <a href="{% url 'project' entry.id entry.title %}" target=_blank title="See more about the {{ entry.title }} project">
+          {{ entry.title }}
+        </a>
+      </h2>
+      <p>{{ entry.author  }}</p>
+      <p>{{ entry.date_published }}</p>
+      <h4>{{ entry.text }}</h4>
+      <p>
+          {% for tag in entry.tags.all %}
+          <span class="badge badge-pill badge-primary">#{{ tag.name }}</span>
+          {% endfor %}
+      </p>
+      
+      <img src="{{ image.image.url }}" style="max-width: 100%">
 
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" height="200px">
-                    <ol class="carousel-indicators">
-                    {% for image in entry.images.all %}
-                      <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %} active{% endif %}"></li>
-                    {% endfor %}
-                    </ol>
-                    <div class="carousel-inner">
-                    {% for image in entry.images.all %}
-                      <div class="carousel-item{% if forloop.first %} active{% endif %}">
-                        
-                        <img class="d-block w-100" src="{{ image.image.url }}" alt="First slide">
-                        
-                      </div>
-                    {% endfor %}
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-                    <br><br><br><br><br>
-                  </div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" height="200px">
+        <ol class="carousel-indicators">
+        {% for image in entry.images.all %}
+          <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %} active{% endif %}"></li>
+        {% endfor %}
+        </ol>
+        <div class="carousel-inner">
+        {% for image in entry.images.all %}
+          <div class="carousel-item{% if forloop.first %} active{% endif %}">
             
+            <img class="d-block w-100" src="{{ image.image.url }}" alt="First slide">
+            
+          </div>
+        {% endfor %}
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      
     </div>
+  </div>
+  <br><br><br><br><br>
+
 {% endfor %}
 </div>
 
