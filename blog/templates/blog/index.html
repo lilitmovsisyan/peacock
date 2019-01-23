@@ -7,13 +7,23 @@
     <div class="row">
         {% for entry in row %}
         <div class="col-sm">
-            <a href="{% url 'project' entry.id entry.title %}" target=_blank title="See more about the {{ entry.title }} project">
-                {{ entry.title }}
-            </a>
+
+            <div class="card bg-dark text-white">
+                {% with entry.images.all.first as image %}
+                <img src="{{ image.image.url }}" class="card-img" alt="{{ image.image }}">
+                <div class="card-img-overlay">
+                    <a class="card-title" href="{% url 'project' entry.id entry.title %}" target=_blank title="See more about the {{ entry.title }} project">
+                        {{ entry.title }}
+                    </a>
+                    {% comment optional card-text %}<p class="card-text"></p>{% endcomment%}
+                </div>
+                {% endwith %}
+            </div>
+
         </div>
         {% endfor %}
     </div>
     {% endfor %}
-  </div>
-
+</div>
+zy
 {% endblock %}
