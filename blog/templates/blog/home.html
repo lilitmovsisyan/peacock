@@ -20,8 +20,6 @@
           {% endfor %}
       </p>
       
-      <img src="{{ image.image.url }}" style="max-width: 100%">
-
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" height="200px">
         <ol class="carousel-indicators">
         {% for image in entry.images.all %}
@@ -32,7 +30,7 @@
         {% for image in entry.images.all %}
           <div class="carousel-item{% if forloop.first %} active{% endif %}">
             
-            <img class="d-block w-100" src="{{ image.image.url }}" alt="First slide">
+            <img class="d-block w-100" src="{{ image.image.url }}" alt="{{ image.image }}">
             
           </div>
         {% endfor %}
@@ -45,7 +43,9 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
+            
       </div>
+
       
     </div>
   </div>
