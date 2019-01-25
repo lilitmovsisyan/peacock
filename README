@@ -1,68 +1,19 @@
-DRAFT
-
-********
-using:
+*********************
+required packages:
 
 python 3.7
 django 2.1
 
+*********************
+made with:
 
 bootstrap 4.1
+Google Fonts
 
-*****************************************************************
-*****************************************************************
+*********************
 
-25/01/2019
-THINGS ACHIEVED:
-
-1. Learned how to import static CSS stylesheet into templates,
-including a Google Font Family, and revised CSS syntax.
-
-2. Practiced using Bootstrap Card-Columns to organise titles
-instead of hardcoding rows/columns on the index page.
-Includes an image 
-BUT 
-could not make the image into a link in the usual way.
-
-TO DO:
-
-1. Figure out how to use an image as a link inside a Card-Column.
-
-2. Continue below.
-
-*****************************************************************
-19/01/2019
-THINGS ACHIEVED:
-
-1. Two home page styles initiated: 
-    a. 10 most recent entries, one after the other as you scroll down page.
-    b. grid layout, meaning you have to click on an entry to see the content.
-
-2. Entry titles on home pages link to project page.
-Currently, a project page has same layout as the individual entries shown on home page. 
-
-3. Models for entries, tags, images, create relational databases. 
-Views retrieve info from databases to pass to templates.
-
-4. Removed hardcoded url.
-
-
-THINGS TO DO:
-
-1. make the index page's grid layout look nicer     --> Tried this out 25/01/2019 
-1b. and add main image to it     --> Tried this out 25/01/2019
-1c. (figure out how to make changes via css)    --> Tried this out 25/01/2019
-
-2. make tags interactive: add an <a> to tags linking
-to a page showing a list of other posts with matching tags
-
-3. figure out how to remove spaces and special characters from urls 
-
-e.g.
-def streamline(string):
-    return "".join(i for i in string if i.isalnum()).lower()
-
-4. create a non-administrator user 
-4b. and update blog through their interface
-
-******************************************************************
+PEACOCK blog/portfolio is my first attempt at using Django.
+Through this project, I am practising creating a website with a relational database.
+The aim is to create a website that can display my sister's various art projects and that is easy for her to update (without using code).
+To do this, I am modelling this website on a blog, and have used various resources including Django Girls' blog tutorial (https://tutorial.djangogirls.org/en/).
+Having fun learning about all the features Django provides to help automate/softcode various parts of creating a web app!
