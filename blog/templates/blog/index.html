@@ -3,27 +3,21 @@
 {% block content %}
 
 <div class="container">
-    {% for row in rows %}
-    <div class="row">
-        {% for entry in row %}
-        <div class="col-sm">
-
-            <div class="card bg-dark text-white">
+    <div class="card-columns">
+        {% for entry in entries %}
+            <div class="card border_light text-center">
                 {% with entry.images.all.first as image %}
-                <img src="{{ image.image.url }}" class="card-img" alt="{{ image.image }}">
-                <div class="card-img-overlay">
-                    <a class="card-title" href="{% url 'project' entry.id entry.title %}" target=_blank title="See more about the {{ entry.title }} project">
+                <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.image }}">
+                <div class="body">
+                    <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
                         {{ entry.title }}
                     </a>
                     {% comment optional card-text %}<p class="card-text"></p>{% endcomment%}
                 </div>
                 {% endwith %}
             </div>
-
-        </div>
         {% endfor %}
     </div>
-    {% endfor %}
 </div>
-zy
+
 {% endblock %}
