@@ -1,5 +1,5 @@
 .p {
-    "background-color:Tomato;
+    background-color:Tomato;
 }
 
 .container {
@@ -7,7 +7,7 @@
   }
 
   .card-columns {
-    display: inline-block
+    display: inline-block;
     @include media-breakpoint-only(lg) {
       column-count: 4;
     }
