@@ -1,0 +1,46 @@
+  .container {
+    justify-content: space-evenly;
+  }
+
+  .card-columns {
+    display: inline-block;
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+  }
+
+  a:link {
+    color: mediumslateblue; 
+    background-color: transparent; 
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: purple;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: midnightblue;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: blueviolet;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+
+  .jumbotron h1, .jumbotron p {
+    color: rgb(121, 35, 88);
+  }
+
+  h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+  }
