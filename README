@@ -10,7 +10,27 @@ django 2.1
 bootstrap 4.1
 
 *****************************************************************
+*****************************************************************
 
+25/01/2019
+THINGS ACHIEVED:
+
+1. Learned how to import static CSS stylesheet into templates,
+including a Google Font Family, and revised CSS syntax.
+
+2. Practiced using Bootstrap Card-Columns to organise titles
+instead of hardcoding rows/columns on the index page.
+Includes an image 
+BUT 
+could not make the image into a link in the usual way.
+
+TO DO:
+
+1. Figure out how to use an image as a link inside a Card-Column.
+
+2. Continue below.
+
+*****************************************************************
 19/01/2019
 THINGS ACHIEVED:
 
@@ -29,9 +49,9 @@ Views retrieve info from databases to pass to templates.
 
 THINGS TO DO:
 
-1. make the index page's grid layout look nicer
-1b. and add main image to it
-1c. (figure out how to make changes via css)
+1. make the index page's grid layout look nicer     --> Tried this out 25/01/2019 
+1b. and add main image to it     --> Tried this out 25/01/2019
+1c. (figure out how to make changes via css)    --> Tried this out 25/01/2019
 
 2. make tags interactive: add an <a> to tags linking
 to a page showing a list of other posts with matching tags
