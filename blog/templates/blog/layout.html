@@ -36,13 +36,25 @@
 <nav>
   <ul class="nav nav-tabs justify-content-center">
     <li class="nav-item">
+      {% if doc_title == 'home' %}
       <a class="nav-link active" href="{% url 'home' %}">Latest</a>
+      {% else %}
+      <a class="nav-link" href="{% url 'home' %}">Latest</a>
+      {% endif%}
     </li>
     <li class="nav-item">
+      {% if doc_title == 'index' %}
+      <a class="nav-link active" href="{% url 'index' %}">Index</a>
+      {% else %}
       <a class="nav-link" href="{% url 'index' %}">Index</a>
+      {% endif %}
     </li>
     <li class="nav-item">
+      {% if doc_title == 'bio' %}
+      <a class="nav-link active" href="#">Bio</a>
+      {% else %}
       <a class="nav-link" href="#">Bio</a>
+      {% endif %}
     </li>
     <li class="nav-item">
       <a class="nav-link disabled" href="#">Disabled</a>
