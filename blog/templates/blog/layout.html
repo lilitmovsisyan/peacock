@@ -33,7 +33,23 @@
   <h1>peacock</h1>
   <p>helloworld</p> 
 </div>
-  
+<nav>
+  <ul class="nav nav-tabs justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="{% url 'home' %}">Latest</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'index' %}">Index</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Bio</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</nav>
+<br><br>
 {% block content %}
 {% endblock %}
 
