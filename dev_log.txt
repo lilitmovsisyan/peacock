@@ -1,5 +1,12 @@
 *****************************************************************
 
+26/01/2019
+THINGS ACHIEVED:
+
+1. Played around with Bootrap nav-tabs
+
+*****************************************************************
+
 25/01/2019
 THINGS ACHIEVED:
 
@@ -33,7 +40,7 @@ THINGS TO DO:
 
 2. Add a 'back to home' button on individual project pages.
 
-3. Add a navigation bar?
+3. Add a navigation bar?    --> Tried this out 26/01/2018
 
 4. Continue below.
 
