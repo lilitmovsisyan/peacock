@@ -29,6 +29,9 @@ def index(request):
     # rows = [entries_list[n:n+3] for n in range(0, len(entries_list), 3)]
     return render(request, 'blog/index.html', {'doc_title': doc_title, 'entries': entries_list})
 
+def bio(request):
+    doc_title = "bio"
+    return render(request, 'blog/bio.html', {'doc_title': doc_title})
 
 # project page:
 def project(request, project_id, project_title):
