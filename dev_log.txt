@@ -65,9 +65,9 @@ to a page showing a list of other posts with matching tags
 
 3. figure out how to remove spaces and special characters from urls 
 
-e.g.
-def streamline(string):
-    return "".join(i for i in string if i.isalnum()).lower()
+    e.g.
+    def streamline(string):
+        return "".join(i for i in string if i.isalnum()).lower()
 
 4. create a non-administrator user 
 4b. and update blog through their interface
