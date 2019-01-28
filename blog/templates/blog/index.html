@@ -7,15 +7,15 @@
         {% for entry in entries %}
             <div class="card border_light text-center">
                 {% with entry.images.all.first as image %}
-                <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
-                    <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.image }}">
-                </a>
-                <div class="body">
                     <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
-                        {{ entry.title }}
+                        <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.image }}">
                     </a>
-                    {% comment optional card-text %}<p class="card-text"></p>{% endcomment%}
-                </div>
+                    <div class="body">
+                        <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
+                            {{ entry.title }}
+                        </a>
+                        {% comment optional card-text %}<p class="card-text"></p>{% endcomment%}
+                    </div>
                 {% endwith %}
             </div>
         {% endfor %}
