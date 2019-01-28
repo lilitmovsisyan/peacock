@@ -7,7 +7,9 @@
         {% for entry in entries %}
             <div class="card border_light text-center">
                 {% with entry.images.all.first as image %}
-                <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.image }}">
+                <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
+                    <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.image }}">
+                </a>
                 <div class="body">
                     <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
                         {{ entry.title }}
