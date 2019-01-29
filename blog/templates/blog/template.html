@@ -3,11 +3,11 @@
 <div id="content">
     {% block content %}
 
-    <div id="image_or_carousel">
-        {% block carousel %}
-            {{ block.super }}
-        {% endblock carousel %}
-    </div>
+        <div id="image_or_carousel">
+            {% block carousel %}
+                {{ block.super }}
+            {% endblock carousel %}
+        </div>
 
     {% endblock %}
 </div>
