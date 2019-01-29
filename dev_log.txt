@@ -80,6 +80,7 @@ THINGS TO DO:
 
 1. make tags interactive: add an <a> to tags linking
 to a page showing a list of other posts with matching tags
+-->> Q: how to get the DB tables to show the linked tables together? (REVISE SQL)
 
 2. figure out how to remove spaces and special characters from urls 
 
