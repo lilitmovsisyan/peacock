@@ -2,17 +2,31 @@
 
 28/01/2019
 
+THINGS ACHIEVED:
+
+1. Fixed index's images so that they hyperlink to project page.
+2. Changed template inheritance to include image/carousel code
+(this must be 'imported' into child templates with {{ block.super }}
+so that is ends up in the right place). 
+    - See Django docs for best practice and how to make custom templates
+
+-----------------------
+THINGS TO DO:
+
+***
 had this weird thing with images - specifically the peacock_crotchet.jpg
 It keeps saving as something with random letters at the end of the name before the .jpg
 How to stop this, and why is it happening anyway? Why doesn't it link properly?
-Also, atm i have to enter Images separately from the Entry. Need to change models. 
+Also, atm i have to enter Images separately from the Entry. Need to change model? 
+***
+
 
 *****************************************************************
 
 26/01/2019
 THINGS ACHIEVED:
 
-1. Played around with Bootrap nav-tabs
+1. Played around with Bootstrap nav-tabs
 
 *****************************************************************
 
