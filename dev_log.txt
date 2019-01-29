@@ -5,6 +5,9 @@ THINGS ACHIEVED:
 
 1. Reminded that when giving a relative filepath/img src you need to start with '/'.
 
+2. Starting to create a tagslist.html page (and then a page listing posts in each tag),
+but having difficulty navigating the DB/model. Gonna look at this fresh tomorrow.
+
 *****************************************************************
 
 
@@ -13,9 +16,11 @@ THINGS ACHIEVED:
 THINGS ACHIEVED:
 
 1. Fixed index's images so that they hyperlink to project page.
+
 2. Changed template inheritance to include image/carousel code
 (this must be 'imported' into child templates with {{ block.super }}
 so that is ends up in the right place). 
+
     - See Django docs for best practice and how to make custom templates
 3. Added a button to return to home.html from any page without using the tabs
 (since users don't always look for a tab when they want to go to base site) 
@@ -72,10 +77,10 @@ Views retrieve info from databases to pass to templates.
 
 4. Removed hardcoded url with Django {% url %} tag and values passed to view. 
 
-******************************************************************
-------------------------------------------------------------------
-------------------------------------------------------------------
-******************************************************************
+************************************************************************************************************************
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+************************************************************************************************************************
 THINGS TO DO:
 
 1. make tags interactive: add an <a> to tags linking
@@ -90,6 +95,8 @@ to a page showing a list of other posts with matching tags
 
 3. create a non-administrator user 
 3b. and update blog through their interface
+
+4. Add an option to upload image WITHIN the New Entry interface
 
 -----------------------
 COMPLETED:
