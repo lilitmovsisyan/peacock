@@ -1,5 +1,14 @@
 *****************************************************************
 
+28/01/2019
+
+had this weird thing with images - specifically the peacock_crotchet.jpg
+It keeps saving as something with random letters at the end of the name before the .jpg
+How to stop this, and why is it happening anyway? Why doesn't it link properly?
+Also, atm i have to enter Images separately from the Entry. Need to change models. 
+
+*****************************************************************
+
 26/01/2019
 THINGS ACHIEVED:
 
@@ -31,6 +40,7 @@ and Django alias assigning using:
     {% with entry.images.all.first as image %} ... {% endwith%}
 and Django comment block:
     {% comment %} ... {% endcomment%}
+    or single-line {# comment #} which won't be rendered
 
 
 ----------------------
