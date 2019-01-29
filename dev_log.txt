@@ -1,5 +1,13 @@
 *****************************************************************
 
+29/01/2019
+THINGS ACHIEVED:
+
+1. Reminded that when giving a relative filepath/img src you need to start with '/'.
+
+*****************************************************************
+
+
 28/01/2019
 
 THINGS ACHIEVED:
