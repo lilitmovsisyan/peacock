@@ -41,6 +41,10 @@ def project(request, project_id, project_title):
     doc_title = entry.title
     return render(request, 'blog/project.html', {'doc_title': doc_title, 'entry': entry})
 
+def taglist(request):
+    doc_title = "tags"
+    return render(request, 'blog/taglist.html', {'doc_title': doc_title, 'test_input': "hello"})
+
 
 """NOTES:
 entry = Entry.objects.all().filter(id=1) --> the .filter() function returns a QuerySet! This is not always what we want!

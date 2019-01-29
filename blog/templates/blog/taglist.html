@@ -1,0 +1,18 @@
+{% extends 'blog/layout.html' %}
+
+<div id="content">
+    {% block content %}
+
+        {{ test_input }}
+
+
+        {% comment %}
+        <div id="image_or_carousel">
+            {% block carousel %}
+                {{ block.super }}
+            {% endblock carousel %}
+        </div>
+        {% endcomment %}
+
+    {% endblock %}
+</div>
