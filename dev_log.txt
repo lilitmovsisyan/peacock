@@ -9,6 +9,9 @@ THINGS ACHIEVED:
 (this must be 'imported' into child templates with {{ block.super }}
 so that is ends up in the right place). 
     - See Django docs for best practice and how to make custom templates
+3. Added a button to return to home.html from any page without using the tabs
+(since users don't always look for a tab when they want to go to base site) 
+    - turned peacock jumbotron heading into button
 
 -----------------------
 THINGS TO DO:
