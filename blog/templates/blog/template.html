@@ -1,8 +1,13 @@
 {% extends 'blog/layout.html' %}
 
-{% block content %}
+<div id="content">
+    {% block content %}
 
+    <div id="image_or_carousel">
+        {% block carousel %}
+            {{ block.super }}
+        {% endblock carousel %}
+    </div>
 
-
-{% endblock %}
-
+    {% endblock %}
+</div>
