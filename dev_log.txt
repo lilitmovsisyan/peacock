@@ -21,17 +21,6 @@ so that is ends up in the right place).
 (since users don't always look for a tab when they want to go to base site) 
     - turned peacock jumbotron heading into button
 
------------------------
-THINGS TO DO:
-
-***
-had this weird thing with images - specifically the peacock_crotchet.jpg
-It keeps saving as something with random letters at the end of the name before the .jpg
-How to stop this, and why is it happening anyway? Why doesn't it link properly?
-Also, atm i have to enter Images separately from the Entry. Need to change model? 
-***
-
-
 *****************************************************************
 
 26/01/2019
@@ -67,16 +56,6 @@ and Django comment block:
     {% comment %} ... {% endcomment%}
     or single-line {# comment #} which won't be rendered
 
-
-----------------------
-THINGS TO DO:
-
-1. Figure out how to use an image as a link inside a Card-Column.   --> RESOLVED 28/01/2019 by using <a><img></a>
-
-2. Add a 'back to home' button on individual project pages.     --> RESOLVED 28/01/2019 by making 'peacock' link to home
-
-3. Add a navigation bar?    --> Tried this out 26/01/2018
-
 *****************************************************************
 19/01/2019
 THINGS ACHIEVED:
@@ -93,23 +72,43 @@ Views retrieve info from databases to pass to templates.
 
 4. Removed hardcoded url with Django {% url %} tag and values passed to view. 
 
-----------------------
+******************************************************************
+------------------------------------------------------------------
+------------------------------------------------------------------
+******************************************************************
 THINGS TO DO:
 
-1. make the index page's grid layout look nicer     --> Tried this out 25/01/2019 
-1b. and add main image to it     --> Tried this out 25/01/2019
-1c. (figure out how to make changes via css)    --> Tried this out 25/01/2019
-
-2. make tags interactive: add an <a> to tags linking
+1. make tags interactive: add an <a> to tags linking
 to a page showing a list of other posts with matching tags
 
-3. figure out how to remove spaces and special characters from urls 
+2. figure out how to remove spaces and special characters from urls 
 
     e.g.
     def streamline(string):
         return "".join(i for i in string if i.isalnum()).lower()
 
-4. create a non-administrator user 
-4b. and update blog through their interface
+3. create a non-administrator user 
+3b. and update blog through their interface
 
-******************************************************************
+-----------------------
+COMPLETED:
+
+*******
+had this weird thing with images - specifically the peacock_crotchet.jpg
+It keeps saving as something with random letters at the end of the name before the .jpg
+How to stop this, and why is it happening anyway? Why doesn't it link properly?
+Also, atm i have to enter Images separately from the Entry. Need to change model? 
+*******                                                             --> MORE OR LESS RESOLVED?? 
+                ISSUE HAS GONE WHEN I LAST RE-UPLOADED IMAGE, BUT I DON'T UNDERSTAND WHAT WAS GOING ON...
+
+1. make the index page's grid layout look nicer                     --> Tried this out 25/01/2019 
+1b. and add main image to it                                        --> Tried this out 25/01/2019
+1c. (figure out how to make changes via css)                        --> Tried this out 25/01/2019
+
+2. Add a navigation bar?                                            --> Tried this out 26/01/2018
+
+3. Figure out how to use an image as a link inside a Card-Column.   --> RESOLVED 28/01/2019 by using <a><img></a>
+
+4. Add a 'back to home' button on individual project pages.         --> RESOLVED 28/01/2019 by making 'peacock' link to home
+
+
