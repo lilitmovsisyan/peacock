@@ -65,11 +65,9 @@ THINGS TO DO:
 
 1. Figure out how to use an image as a link inside a Card-Column.   --> RESOLVED 28/01/2019 by using <a><img></a>
 
-2. Add a 'back to home' button on individual project pages.
+2. Add a 'back to home' button on individual project pages.     --> RESOLVED 28/01/2019 by making 'peacock' link to home
 
 3. Add a navigation bar?    --> Tried this out 26/01/2018
-
-4. Continue below.
 
 *****************************************************************
 19/01/2019
