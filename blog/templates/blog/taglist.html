@@ -6,7 +6,7 @@
         <div class="container text-center" >
             {% for tag in tags_list %}
 
-                <ul><span class="badge badge-pill badge-primary">
+                <ul><span class="badge badge-pill badge-light">
                     <a href="{% url 'tagpage' tag.name %}" title="see all projects with tag #{{ tag }}">
                         #{{ tag }}
                     </a></span>
