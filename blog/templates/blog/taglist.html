@@ -3,10 +3,14 @@
 <div id="content">
     {% block content %}
 
-        <div class="container">
+        <div class="container text-center" >
             {% for tag in tags_list %}
 
-                <li><a href="{% url 'tags' %}" title="see all projects with tag #{{ tag }}">#{{ tag }}</a></li>
+                <ul><span class="badge badge-pill badge-primary">
+                    <a href="{% url 'tagpage' tag.name %}" title="see all projects with tag #{{ tag }}">
+                        #{{ tag }}
+                    </a></span>
+                </ul>
         
             {% endfor %}
         </div>
