@@ -17,11 +17,11 @@
         <h4>{{ entry.text }}</h4>
         <p>
             {% for tag in entry.tags.all %}
-            <span class="badge badge-pill badge-primary">
-                <a href="{% url 'tagpage' tag.name %}" title="See all projects with tag #{{ tag }}">
-                  #{{ tag.name }}
-                </a>
-            </span>
+              <span class="badge badge-pill badge-primary">
+                  <a href="{% url 'tagpage' tag.name %}" title="See all projects with tag #{{ tag }}">
+                    #{{ tag.name }}
+                  </a>
+              </span>
             {% endfor %}
         </p>
         
