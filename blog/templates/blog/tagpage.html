@@ -1,0 +1,24 @@
+{% extends 'blog/layout.html' %}
+
+<div id="content">
+    {% block content %}
+
+        <div class="container">
+            {% for entry in matching_entries %}
+
+                <li><a href="{% url 'project' entry.id entry.title %}">{{ entry }}</a></li>
+        
+            {% endfor %}
+        </div>
+
+
+        {% comment %}
+        <div id="image_or_carousel">
+            {% block carousel %}
+                {{ block.super }}
+            {% endblock carousel %}
+        </div>
+        {% endcomment %}
+
+    {% endblock %}
+</div>
