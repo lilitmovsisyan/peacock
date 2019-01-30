@@ -2,11 +2,13 @@
 
 <div id="content">
     {% block content %}
-
+        
         <div class="container">
+            <h1>#{{ tag_name }}</h1>
+            <br>
             {% for entry in matching_entries %}
 
-                <li><a href="{% url 'project' entry.id entry.title %}">{{ entry }}</a></li>
+                <ul><a href="{% url 'project' entry.id entry.title %}">{{ entry }}</a></ul>
         
             {% endfor %}
         </div>
