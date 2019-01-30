@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Entry
+from .models import Entry, Tag
 
 # Create your views here.
 
@@ -43,7 +43,8 @@ def project(request, project_id, project_title):
 
 def taglist(request):
     doc_title = "tags"
-    return render(request, 'blog/taglist.html', {'doc_title': doc_title, 'test_input': "hello"})
+    tags_list = [t for t in Tag.objects.all().order_by('name')]
+    return render(request, 'blog/taglist.html', {'doc_title': doc_title, 'tags_list': tags_list})
 
 
 """NOTES:
