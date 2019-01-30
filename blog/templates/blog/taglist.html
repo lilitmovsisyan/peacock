@@ -3,11 +3,14 @@
 <div id="content">
     {% block content %}
 
-        {% for tag in tags_list %}
+        <div class="container">
+            {% for tag in tags_list %}
 
-            {{ tag }}
+                <li><a href="{% url 'tags' %}" title="see all projects with tag #{{ tag }}">#{{ tag }}</a></li>
         
-        {% endfor %}
+            {% endfor %}
+        </div>
+
 
         {% comment %}
         <div id="image_or_carousel">
