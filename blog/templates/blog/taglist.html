@@ -1,4 +1,4 @@
-{% extends 'blog/base_carousel.html' %}
+{% extends 'blog/base.html' %}
 
 <div id="content">
     {% block content %}
@@ -14,15 +14,6 @@
         
             {% endfor %}
         </div>
-
-
-        {% comment %}
-        <div id="image_or_carousel">
-            {% block carousel %}
-                {{ block.super }}
-            {% endblock carousel %}
-        </div>
-        {% endcomment %}
 
     {% endblock %}
 </div>
