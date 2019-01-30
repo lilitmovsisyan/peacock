@@ -1,5 +1,19 @@
 *****************************************************************
+30/01/2019 
 
+(write up properly later:)
+--- use dot notation to access info from a linked object/table. See saved screenshot.
+--- use ForeignKey to link two tables(models). Give the ForeignKey field property to the models which is on the "Many" side.
+--- can't associate an object with another untill you save it - is this why i can't upload an image in the same interface as writing an entry?
+--- accessing linked objects in Many-to_many relation: mytag.entry_set.all() vs myentry.tag.all(). The model which has the ManyToMany field needs to be accessed by _set
+
+need to make the image_cards have a filter for the case where there are NO images;
+need to change pill/text colour in hyperlink as blue and purple don't work
+need to make sure all tag pills are hyperlinked.
+maybe add tag pills to the Index page somehow?
+make the tag pills hyperlink html part of base.html template??
+
+*****************************************************************
 29/01/2019
 THINGS ACHIEVED:
 
