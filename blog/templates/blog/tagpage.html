@@ -8,19 +8,17 @@
             <br>
             {% for entry in matching_entries %}
 
-                <ul><a href="{% url 'project' entry.id entry.title %}">{{ entry }}</a></ul>
-        
+                <ul>
+                    <a href="{% url 'project' entry.id entry.title %}">
+                        {{ entry }}
+                    </a>
+                </ul>
+
             {% endfor %}
         </div>
 
 
-        {% comment %}
-        <div id="image_or_carousel">
-            {% block carousel %}
-                {{ block.super }}
-            {% endblock carousel %}
-        </div>
-        {% endcomment %}
+
 
     {% endblock %}
 </div>
