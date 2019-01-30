@@ -1,31 +1,33 @@
-{% extends 'blog/layout.html' %}
+{% extends 'blog/base_carousel.html' %}
 
-{% block content %}
+<div id="content">
+    {% block content %}
 
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <h2>{{ entry.title }}</h2>
-            <p>{{ entry.author  }}</p>
-            <p>{{ entry.date_published }}</p>
-            <h4>{{ entry.text }}</h4>
-            <p>
-                {% for tag in entry.tags.all %}
-                <span class="badge badge-pill badge-primary">#{{ tag.name }}</span>
-                {% endfor %}
-            </p>
-            
-            <div id="image_or_carousel">
-                {% block carousel %}
-                    {{ block.super }}
-                {% endblock carousel %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>{{ entry.title }}</h2>
+                <p>{{ entry.author  }}</p>
+                <p>{{ entry.date_published }}</p>
+                <h4>{{ entry.text }}</h4>
+                <p>
+                    {% for tag in entry.tags.all %}
+                    <span class="badge badge-pill badge-primary">#{{ tag.name }}</span>
+                    {% endfor %}
+                </p>
+                
+                <div id="image_or_carousel">
+                    {% block carousel %}
+                        {{ block.super }}
+                    {% endblock carousel %}
+                </div>
+                
+                <br><br><br><br><br>
+                
             </div>
-            
-            <br><br><br><br><br>
-            
         </div>
     </div>
+                
+    {% endblock %}
 </div>
-            
-{% endblock %}
