@@ -49,8 +49,8 @@ def taglist(request):
 def tagpage(request, tag_name):
     doc_title = "#" + tag_name
     tag = Tag.objects.get(name=tag_name)
-    matching_entries = [e for e in tag.entry_set.all()]
-    return render(request, 'blog/tagpage.html', {'doc_title': doc_title, 'tag_name': tag_name, 'matching_entries': matching_entries})
+    entries = [e for e in tag.entry_set.all()]
+    return render(request, 'blog/tagpage.html', {'doc_title': doc_title, 'tag_name': tag_name, 'entries': entries})
 
 
 """NOTES:

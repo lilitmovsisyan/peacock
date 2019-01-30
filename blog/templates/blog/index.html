@@ -1,25 +1,13 @@
-{% extends 'blog/layout.html' %}
+{% extends 'blog/base_cards.html' %}
 
-{% block content %}
-
-<div class="container">
-    <div class="card-columns">
-        {% for entry in entries %}
-            <div class="card border_light text-center">
-                {% with entry.images.all.first as image %}
-                    <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
-                        <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.image }}">
-                    </a>
-                    <div class="body">
-                        <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
-                            {{ entry.title }}
-                        </a>
-                        {% comment optional card-text %}<p class="card-text"></p>{% endcomment%}
-                    </div>
-                {% endwith %}
-            </div>
-        {% endfor %}
-    </div>
+<div id="content">
+    {% block content %}
+    
+        <div id="image_cards">
+            {% block image_cards %}
+                {{ block.super }}
+            {% endblock%}
+        </div>
+        
+    {% endblock %}
 </div>
-
-{% endblock %}
