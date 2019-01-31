@@ -2,39 +2,39 @@
 
 {% block content %}
 
-  <!--IMAGE: single image stacked in cards-->
-  <div id="image_cards">
-      {% block image_cards %}
-          <div class="container">
-              <div class="card-columns">
-                  {% for entry in entries %}
-                      <div class="card border_light text-center">
-                          {% with entry.images.all.first as image %}
-                              <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
-                                  <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.image }}">
-                              </a>
-                              <div class="body">
-                                  <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
-                                      {{ entry.title }}
-                                  </a>
-                                  {% comment optional card-text %}<p class="card-text"></p>{% endcomment%}
-                                  
-                                  <div id="tag_pills">
-                                    {% for tag in entry.tags.all %}
+    <!--IMAGE: single image stacked in cards-->
+    <div id="image_cards">
+        {% block image_cards %}
+            <div class="container">
+                <div class="card-columns">
+                    {% for entry in entries %}
+                        <div class="card border_light text-center">
+                            {% with entry.images.all.first as image %}
+                                <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
+                                    <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.image }}">
+                                </a>
+                                <div class="body">
+                                    <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
+                                        {{ entry.title }}
+                                    </a>
+                                    {% comment optional card-text %}<p class="card-text"></p>{% endcomment%}
+                                    
+                                    <div id="tag_pills">
+                                        {% for tag in entry.tags.all %}
                                             {% block tag_pills %}
                                                 {{ block.super }}
                                             {% endblock %}
-                                    {% endfor %}
-                                  </div>
+                                        {% endfor %}
+                                    </div>
 
-                              </div>
-                          {% endwith %}
-                      </div>
-                  {% endfor %}
-              </div>
-          </div>        
-      {% endblock %}
-  </div>
-  
-{% endblock %}
+                                </div>
+                            {% endwith %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>        
+        {% endblock %}
+    </div>
+    
+    {% endblock %}
 
