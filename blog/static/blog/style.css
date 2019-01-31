@@ -46,6 +46,13 @@
     color: rgb(121, 35, 88);
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
+  }
+
+  body {
+    background: "/blog/static/blog/images/apple_blossom_gradient.jpg";
+  }
+
+  #tag_pills {
   }
