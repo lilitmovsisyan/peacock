@@ -78,11 +78,9 @@
 
     <span id="tag_pills">
       {% block tag_pills %}
-        <span class="badge badge-pill badge-primary">
-            <a href="{% url 'tagpage' tag.name %}" title="See all projects with tag #{{ tag }}">
-              #{{ tag.name }}
-            </a>
-        </span>
+        <a href="{% url 'tagpage' tag.name %}" class="badge badge-pill badge-dark" title="See all projects with tag #{{ tag }}">
+          #{{ tag.name }}
+        </a>
       {% endblock %}
     </span>
 
