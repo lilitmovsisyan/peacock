@@ -36,6 +36,12 @@
     text-decoration: underline;
   }
 
+  .jumbotron {
+    margin-top: 20px;
+    background-image: url("/static/blog/images/apple_blosson_gradient.jpg");
+    background-size: cover;
+    color: white;
+  }
 
   .jumbotron h1, .jumbotron p {
     color: rgb(121, 35, 88);
