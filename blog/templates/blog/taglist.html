@@ -6,10 +6,12 @@
         <div class="container text-center" >
             {% for tag in tags_list %}
 
-                <ul><span class="badge badge-pill badge-light">
-                    <a href="{% url 'tagpage' tag.name %}" title="See all projects with tag #{{ tag }}">
-                        #{{ tag }}
-                    </a></span>
+                <ul>        
+                    <span id="tag_pills">
+                        {% block tag_pills %}
+                            {{ block.super }}
+                        {% endblock %}
+                    </span>
                 </ul>
         
             {% endfor %}
