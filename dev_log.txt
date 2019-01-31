@@ -1,4 +1,22 @@
 *****************************************************************
+31/01/2019
+
+(write up properly later)
+some links open _target and some links open _blank. make a choice.
+pills take the size of whatever their parent <tag> is, e.g. <h1><span ...pill...></span></h1> makes it big.
+
+get the headshot on bio page to load using {% static 'blog/images/headshot...' %}
+
+I'm having mega problems with my static files. The only way i get Django to oimplement my CSS stylesheet
+is by changing STATIC_URL to '/blog/static/', BUT THIS SHOULD BE WRONG!!! THis should be where files are being
+copied for deployment, not where they are being read from. And why does the {% static %} handle work sometimes, not others?
+ALSO should /media/ be where it is? It's not exactly part of the app, so better to be with the db? But the permanent pics are
+part of the app, so they should stay in blog/static/blog/images/ right?
+NOTE: can't use {% static %} in style.css because it is a django tool. So must use full image url. But why doesn't it work elsewhere sometimes?
+And why does <body background="/blog/static/..."> work, but when i try instead to put it in style.css, it doesn't work??
+
+
+*****************************************************************
 30/01/2019 
 
 (write up properly later:)
@@ -9,9 +27,9 @@
 
 need to make the image_cards have a filter for the case where there are NO images;
 need to change pill/text colour in hyperlink as blue and purple don't work
-need to make sure all tag pills are hyperlinked.
-maybe add tag pills to the Index page somehow?
-make the tag pills hyperlink html part of base.html template??
+need to make sure all tag pills are hyperlinked. --> Resolved 31/01/2019
+maybe add tag pills to the Index page somehow?   --> Resolved 31/01/2019
+make the tag pills hyperlink html part of base.html template??  --> Resolved 31/01/2019 BUT project page/home page tags are in a list...
 
 *****************************************************************
 29/01/2019
@@ -97,9 +115,8 @@ Views retrieve info from databases to pass to templates.
 ************************************************************************************************************************
 THINGS TO DO:
 
-1. make tags interactive: add an <a> to tags linking
-to a page showing a list of other posts with matching tags
--->> Q: how to get the DB tables to show the linked tables together? (REVISE SQL)
+1. (related to #5 from COMPLETED list below):
+-->> Q: how to get the DB tables to show the linked tables together? (REVISE SQL) 
 
 2. figure out how to remove spaces and special characters from urls 
 
@@ -133,4 +150,5 @@ Also, atm i have to enter Images separately from the Entry. Need to change model
 
 4. Add a 'back to home' button on individual project pages.         --> RESOLVED 28/01/2019 by making 'peacock' link to home
 
-
+5. make tags interactive: add an <a> to tags linking
+to a page showing a list of other posts with matching tags          --> Resolved 31/01/2019
