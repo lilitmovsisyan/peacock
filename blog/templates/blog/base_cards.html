@@ -14,18 +14,22 @@
                                     <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.image }}">
                                 </a>
                                 <div class="body">
-                                    <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
+                                    <h4>
+                                        <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
                                         {{ entry.title }}
-                                    </a>
+                                        </a>
+                                    </h4>
                                     {% comment optional card-text %}<p class="card-text"></p>{% endcomment%}
                                     
-                                    <div id="tag_pills">
-                                        {% for tag in entry.tags.all %}
-                                            {% block tag_pills %}
-                                                {{ block.super }}
-                                            {% endblock %}
-                                        {% endfor %}
-                                    </div>
+                                    <h5>
+                                        <div id="tag_pills">
+                                            {% for tag in entry.tags.all %}
+                                                {% block tag_pills %}
+                                                    {{ block.super }}
+                                                {% endblock %}
+                                            {% endfor %}
+                                        </div>
+                                    </h5>
 
                                 </div>
                             {% endwith %}
