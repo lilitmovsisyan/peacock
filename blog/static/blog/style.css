@@ -42,8 +42,8 @@
     color: white;
   }
 
-  .jumbotron h1, .jumbotron p {
-    color: rgb(121, 35, 88);
+  .jumbotron h1, .jumbotron h4, .jumbotron h5, .jumbotron p {
+    color: rgb(78, 0, 151);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -54,5 +54,6 @@
     background: "/blog/static/blog/images/apple_blossom_gradient.jpg";
   }
 
-  #tag_pills {
+  #tag_pills, .badge-pill {
+    color: blue;
   }
