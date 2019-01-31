@@ -18,6 +18,15 @@
                                       {{ entry.title }}
                                   </a>
                                   {% comment optional card-text %}<p class="card-text"></p>{% endcomment%}
+                                  
+                                  <div id="tag_pills">
+                                    {% for tag in entry.tags.all %}
+                                            {% block tag_pills %}
+                                                {{ block.super }}
+                                            {% endblock %}
+                                    {% endfor %}
+                                  </div>
+
                               </div>
                           {% endwith %}
                       </div>
