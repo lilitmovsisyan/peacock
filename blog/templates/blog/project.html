@@ -12,11 +12,13 @@
                 <p>{{ entry.date_published }}</p>
                 <h4>{{ entry.text }}</h4>
                 <p>
-                    <span id="tag_pills">
-                        {% block tag_pills %}
-                            {{ block.super }}
-                        {% endblock %}
-                    </span>
+                    {% for tag in entry.tags.all %}
+                        <span id="tag_pills">
+                            {% block tag_pills %}
+                                {{ block.super }}
+                            {% endblock %}
+                        </span>                  
+                    {% endfor %}
                 </p>
                 
                 <div id="image_or_carousel">
