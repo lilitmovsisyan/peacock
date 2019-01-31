@@ -37,8 +37,7 @@
   }
 
   .jumbotron {
-    margin-top: 20px;
-    background-image: url("/static/blog/images/apple_blosson_gradient.jpg");
+    background-image: url("/blog/static/blog/images/apple_blossom_gradient.jpg");
     background-size: cover;
     color: white;
   }
