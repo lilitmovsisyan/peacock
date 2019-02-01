@@ -52,6 +52,7 @@
 
   body {
     background: "/blog/static/blog/images/apple_blossom_gradient.jpg";
+    background-color: pink;
   }
 
   #tag_pills, .badge-pill {

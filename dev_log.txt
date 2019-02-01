@@ -128,9 +128,6 @@ THINGS TO DO:
 COMPLETED:
 
 *******
-had this weird thing with images - specifically the peacock_crotchet.jpg
-It keeps saving as something with random letters at the end of the name before the .jpg
-How to stop this, and why is it happening anyway? Why doesn't it link properly?
 Also, atm i have to enter Images separately from the Entry. Need to change model? 
 *******                                                             --> MORE OR LESS RESOLVED?? 
                 ISSUE HAS GONE WHEN I LAST RE-UPLOADED IMAGE, BUT I DON'T UNDERSTAND WHAT WAS GOING ON...
@@ -155,3 +152,10 @@ to a page showing a list of other posts with matching tags          --> Resolved
 6.get the headshot on bio page to load using                        --> Resolved 31/01/2019 
 {% static 'blog/images/headshot...' %}              (needed to incldue {% load static %} on the child page)            
 
+6. had this weird thing going on with images - specifically the peacock_crotchet.jpg  --> Resolved 01/02/2019
+It keeps saving as something with random letters at the end of the name before the .jpg
+How to stop this, and why is it happening anyway? Why doesn't it link properly?
+    --> ANSWER: I have been "re-saving" the image in /media/, instead of saving it from elsewhere INTO /media/.
+    When User uploads an image to the db, a COPY is saved in /media/. But if peacock_crotchet.jpg already exists in 
+    /media/, then it saves with a hash at the end to differentiate it. I was uploading the image FROM /media/, so
+    a duplicate was being created. 
