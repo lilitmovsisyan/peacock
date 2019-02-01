@@ -2,11 +2,11 @@
 31/01/2019
 
 (write up properly later)
-some links open _target and some links open _blank. make a choice.
+some links open _self and some links open _blank. make a choice.
 pills take the size of whatever their parent <tag> is, e.g. <h1><span ...pill...></span></h1> makes it big.
 
-I'm having mega problems with my static files. The only way i get Django to oimplement my CSS stylesheet
-is by changing STATIC_URL to '/blog/static/', BUT THIS SHOULD BE WRONG!!! THis should be where files are being
+I'm having mega problems with my static files. The only way i get Django to implement my CSS stylesheet
+is by changing STATIC_URL to '/blog/static/', BUT THIS SHOULD BE WRONG!!! This should be where files are being
 copied for deployment, not where they are being read from. And why does the {% static %} handle work sometimes, not others?
 ALSO should /media/ be where it is? It's not exactly part of the app, so better to be with the db? But the permanent pics are
 part of the app, so they should stay in blog/static/blog/images/ right?
