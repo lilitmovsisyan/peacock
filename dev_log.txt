@@ -1,9 +1,27 @@
 *****************************************************************
+02/02/2019
+THINGS ACHIEVED:
+
+1. Resolved the weird shylesheet trouble by re-writing it. 
+
+2. Learned more about CSS specificity (e.g. .nav-tabs > li.active > a, {}) 
+and how order of markup affects styling, e.g.:
+placing <a><p>content</p><a> means you can manage the style of your content with <p>
+
+*****************************************************************
+01/02/2019
+THIGNS ACHIEVED:
+
+1. Resolved the weirdness with peacock_crotchet.jpg (see #7 in COMPLETED section).
+
+2. Added image to jumbotron and learned more about styling badge-pills
+
+*****************************************************************
 31/01/2019
 
 (write up properly later)
-some links open _self and some links open _blank. make a choice.
-pills take the size of whatever their parent <tag> is, e.g. <h1><span ...pill...></span></h1> makes it big.
+
+*--- pills take the size of whatever their parent <tag> is, e.g. <h1><span ...pill...></span></h1> makes it big.
 
 I'm having mega problems with my static files. The only way i get Django to implement my CSS stylesheet
 is by changing STATIC_URL to '/blog/static/', BUT THIS SHOULD BE WRONG!!! This should be where files are being
@@ -15,17 +33,17 @@ And why does <body background="/blog/static/..."> work, but when i try instead t
 
 Trying to change styles for body and #tag_pills, but it doesn't work. Why? See a previous commit. 
 
+--> Resolved the CSS stylesheet problems, including the STATIC_URL issue. 
+Not sure why, or what was happening, unfortunately. But when I reswrote the stylesheet and used /static/, it worked. 
+
 *****************************************************************
 30/01/2019 
 
 (write up properly later:)
---- use dot notation to access info from a linked object/table. See saved screenshot.
---- use ForeignKey to link two tables(models). Give the ForeignKey field property to the models which is on the "Many" side.
---- can't associate an object with another untill you save it - is this why i can't upload an image in the same interface as writing an entry?
---- accessing linked objects in Many-To-Many relation: mytag.entry_set.all() vs myentry.tag.all(). The model which has the ManyToMany field needs to be accessed by _set
-
-need to make the image_cards have a filter for the case where there are NO images;
-need to change pill/text colour in hyperlink as blue and purple don't work
+*--- use dot notation to access info from a linked object/table. See saved screenshot.
+*--- use ForeignKey to link two tables(models). Give the ForeignKey field property to the models which is on the "Many" side.
+*--- can't associate an object with another untill you save it - is this why i can't upload an image in the same interface as writing an entry?
+*--- accessing linked objects in Many-To-Many relation: mytag.entry_set.all() vs myentry.tag.all(). The model which has the ManyToMany field needs to be accessed by _set
 
 *****************************************************************
 29/01/2019
@@ -130,7 +148,6 @@ COMPLETED:
 *******
 Also, atm i have to enter Images separately from the Entry. Need to change model? 
 *******                                                             --> MORE OR LESS RESOLVED?? 
-                ISSUE HAS GONE WHEN I LAST RE-UPLOADED IMAGE, BUT I DON'T UNDERSTAND WHAT WAS GOING ON...
 
 1. make the index page's grid layout look nicer                     --> Tried this out 25/01/2019 
 1b. and add main image to it                                        --> Tried this out 25/01/2019
@@ -152,10 +169,16 @@ to a page showing a list of other posts with matching tags          --> Resolved
 6.get the headshot on bio page to load using                        --> Resolved 31/01/2019 
 {% static 'blog/images/headshot...' %}              (needed to incldue {% load static %} on the child page)            
 
-6. had this weird thing going on with images - specifically the peacock_crotchet.jpg  --> Resolved 01/02/2019
+7. had this weird thing going on with images - specifically the peacock_crotchet.jpg  --> Resolved 01/02/2019
 It keeps saving as something with random letters at the end of the name before the .jpg
 How to stop this, and why is it happening anyway? Why doesn't it link properly?
     --> ANSWER: I have been "re-saving" the image in /media/, instead of saving it from elsewhere INTO /media/.
     When User uploads an image to the db, a COPY is saved in /media/. But if peacock_crotchet.jpg already exists in 
     /media/, then it saves with a hash at the end to differentiate it. I was uploading the image FROM /media/, so
     a duplicate was being created. 
+
+8. need to change pill/text colour in hyperlink as blue and purple don't work  --> Resolved 02/02/2019 by ONLY modifying a:hover, not a:link. 
+
+9. some links open _self and some links open _blank. make a choice.    --> Resolved 02/02/2019
+
+10. need to make the image_cards have a filter for the case where there are NO images.  --> N/A not needed 
