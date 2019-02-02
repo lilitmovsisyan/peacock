@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(252, 216, 227);
+}
+
+.jumbotron {
+    background-image: url(/blog/static/blog/images/apple_blossom_gradient.jpg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: midnightblue;
+}
