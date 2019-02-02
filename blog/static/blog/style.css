@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(252, 216, 227);
+    background-color: rgb(255, 205, 255);
 }
 
 .jumbotron {
@@ -9,4 +9,10 @@ body {
 h1, h2, h3, h4, h5, h6, p {
     color: midnightblue;
     font-family: 'Montserrat', sans-serif;
+}
+  
+a:hover {
+    color: midnightblue;
+    background-color: transparent;
+    text-decoration: underline;
 }
