@@ -14,11 +14,9 @@
                                     <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.image }}">
                                 </a>
                                 <div class="body">
-                                    <h4>
-                                        <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
-                                        {{ entry.title }}
-                                        </a>
-                                    </h4>
+                                    <a href="{% url 'project' entry.id entry.title %}" target="_blank" title="See more about the {{ entry.title }} project">
+                                        <h4>{{ entry.title }}</h4>
+                                    </a>
                                     {% comment optional card-text %}<p class="card-text"></p>{% endcomment%}
                                     
                                     <h5>
