@@ -7,7 +7,7 @@
   {% for entry in entries_list %}
     <div class="row">
       <div class="col">
-        <a href="{% url 'project' entry.id entry.title %}" target="_self" title="See more about the {{ entry.title }} project">
+        <a href="{% url 'project' entry.id entry.title %}" title="See more about the {{ entry.title }} project">
           <h2>{{ entry.title }}</h2>
         </a>
         <p>{{ entry.author  }}</p>
