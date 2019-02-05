@@ -3,7 +3,7 @@ body {
 }
 
 .jumbotron {
-    background-image: url(/blog/static/blog/images/apple_blossom_gradient.jpg);
+    background: url("/blog/static/blog/images/apple_blossom_gradient.jpg");
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -20,5 +20,5 @@ a:hover {
 .nav-tabs > li.active > a, 
 .nav-tabs > li.active > a:focus, 
 .nav-tabs > li.active > a:hover {
-  background-color: red !important;
+  background-color: rgb(241, 101, 176) !important;
 }
