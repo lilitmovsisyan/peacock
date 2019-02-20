@@ -13,7 +13,7 @@ def home(request):
 """
 
 # blog post style home page, showing ten most recent posts as you scroll down the page:
-def home(request):
+def bloghome(request):
     doc_title = "home"
     # retrieve all Entry objects from database (in reverse date order)
     entries_list = [e for e in Entry.objects.all().order_by('-date_published')] 

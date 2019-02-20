@@ -30,7 +30,7 @@
 
 <div id="peacock_heading_bar">
   <div class="jumbotron text-center">
-    <a class="btn" href="{% url 'home' %}"><h1>peacock_paradise</h1></a><br>
+    <a class="btn" href="{% url 'bloghome' %}"><h1>peacock_paradise</h1></a><br>
     <a class="btn" href="{% url 'bio' %}"><h4>Anni Movsisyan</h4></a><br>
     <a class="btn" href="{% url 'bio' %}"><h5>Artist, Musician, Educator</h5></a>
   </div>
@@ -41,9 +41,9 @@
     <ul class="nav nav-tabs justify-content-center">
       <li class="nav-item">
         {% if doc_title == 'home' %}
-          <a class="nav-link active" href="{% url 'home' %}"><p>Latest</p></a>
+          <a class="nav-link active" href="{% url 'bloghome' %}"><p>Latest</p></a>
         {% else %}
-          <a class="nav-link" href="{% url 'home' %}"><p>Latest</p></a>
+          <a class="nav-link" href="{% url 'bloghome' %}"><p>Latest</p></a>
         {% endif%}
       </li>
       <li class="nav-item">
