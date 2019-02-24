@@ -1,9 +1,11 @@
+{% load static %}
+
 body {
     background-color: rgb(255, 217, 217);
 }
 
 .jumbotron {
-    background: url("/blog/static/blog/images/apple_blossom_gradient.jpg");
+    background: '{% static "images/apple_blossom_gradient.jpg" %})';
 }
 
 h1, h2, h3, h4, h5, h6, p {
