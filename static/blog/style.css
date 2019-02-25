@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(255, 217, 217);
+}
+
+.jumbotron {
+    background-image: url('/static/blog/images/apple_blossom_gradient.jpg');
+    background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: midnightblue;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+a:hover {
+    color: midnightblue;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:focus, 
+.nav-tabs > li.active > a:hover {
+  background-color: rgb(241, 101, 176) !important;
+}

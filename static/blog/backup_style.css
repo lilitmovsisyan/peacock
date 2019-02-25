@@ -1,0 +1,59 @@
+  .container {
+    justify-content: space-evenly;
+  }
+
+  .card-columns {
+    display: inline-block;
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+  }
+
+  a:link {
+    color: mediumslateblue; 
+    background-color: transparent; 
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: purple;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: midnightblue;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: blueviolet;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  .jumbotron {
+    background-image: url("/blog/static/blog/images/apple_blossom_gradient.jpg");
+    background-size: cover;
+    color: white;
+  }
+
+  .jumbotron h1, .jumbotron h4, .jumbotron h5, .jumbotron p {
+    color: rgb(78, 0, 151);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  body {
+    background-color: rgb(252, 204, 232);
+  }
+
+  #tag_pills, .badge-pill {
+    color: blue;
+  }
