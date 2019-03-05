@@ -8,7 +8,7 @@
             <!--IMAGE: single image or carousel slides-->
             {% if entry.images.all|length == 1 %}
                 {% with entry.images.get as image %}
-                    <img src="{{ image.image.url }}" alt="{{ image.image }}" style="max-width: 100%">
+                    <img src="{{ image.image.url }}" alt="{{ image.name }}" style="max-width: 100%">
                 {% endwith %}
 
             {% elif entry.images.all|length > 1 %}
@@ -23,7 +23,7 @@
                         {% for image in entry.images.all %}
                             <div class="carousel-item{% if forloop.first %} active{% endif %}">
                             
-                                <img class="d-block w-100" src="{{ image.image.url }}" alt="{{ image.image }}">
+                                <img class="d-block w-100" src="{{ image.image.url }}" alt="{{ image.name }}">
                             
                             </div>
                         {% endfor %}

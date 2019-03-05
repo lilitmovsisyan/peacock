@@ -11,7 +11,7 @@
                         <div class="card border_light text-center bg-transparent">
                             {% with entry.images.all.first as image %}
                                 <a href="{% url 'project' entry.id entry.title %}" title="See more about the {{ entry.title }} project">
-                                    <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.image }}">
+                                    <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.name }}">
                                 </a>
                                 <div class="body">
                                     <a href="{% url 'project' entry.id entry.title %}" title="See more about the {{ entry.title }} project">
